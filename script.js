@@ -42,7 +42,7 @@ function updateMoveCounter() {
     progressBar.value = moveCount;
 
     // Controlla se il numero di mosse supera il limite
-    if (moveCount > 1000) { // Cambiato il limite a 1000
+    if (moveCount > 100) { // Sconfitta a 101 mosse
         setTimeout(() => {
             alert("Hai perso. Riprova!"); // Mostra il messaggio di fine gioco
             restartGame(); // Riavvia il gioco
