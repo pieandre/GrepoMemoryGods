@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+    text-align: center;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(6, 100px); /* 6 colonne */
+    grid-template-rows: repeat(4, 100px);   /* 4 righe */
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px; /* Impostiamo la prospettiva per l'effetto 3D */
+    cursor: pointer; /* Cambia il cursore per indicare che la carta è cliccabile */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Effetto ombra */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out; /* Aumentato il tempo e aggiunto un "ease-out" per un effetto più fluido */
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); /* Ruota la carta quando viene selezionata */
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Nasconde la parte opposta quando la carta è girata */
+    border-radius: 10px;
+    pointer-events: none; /* Disabilita i clic sulle facce della carta */
+}
+
+/* Retro della carta */
+.card-back {
+    background-color: #f7c14e; /* Colore di retro delle carte più vivace */
+    background-image: url('images/back.png'); /* Immagine di retro */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Aggiunta una leggera ombra per effetto tridimensionale */
+}
+
+/* Fronte della carta */
+.card-front {
+    transform: rotateY(180deg); /* La parte frontale è inizialmente nascosta */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Effetto glow per carte abbinate */
+.card.matched {
+    box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.6); /* Aggiungi un bagliore verde quando le carte sono abbinate */
+}
+
+/* Contatore delle mosse e barra di progresso */
+.game-info {
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center; /* Centra il testo e i contenuti */
+    display: flex;
+    flex-direction: column; /* Organizza gli elementi in una colonna */
+    align-items: center; /* Centra orizzontalmente la barra di progresso */
+}
+
+/* Barra di progresso */
+#move-progress {
+    width: 200%; /* Impostiamo la larghezza al 200% del contenitore */
+    max-width: 1000px; /* Impostiamo un limite massimo per la barra */
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 15px; /* Angoli arrotondati */
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra di progresso personalizzata */
+#move-progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 15px; /* Angoli arrotondati per il bordo della barra */
+}
+
+#move-progress::-webkit-progress-value {
+    background-color: #6c7cff; /* Colore blu per la barra */
+    border-radius: 15px; /* Angoli arrotondati per il valore */
+}
+.game-description {
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #333;  /* Colore di sfondo per la sezione di spiegazione */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px; /* Impostiamo una larghezza massima */
+    width: 100%; /* Rende la larghezza della sezione fluida */
+    margin-left: auto; /* Centra orizzontalmente */
+    margin-right: auto; /* Centra orizzontalmente */
+}
+
+.game-description p {
+    margin: 0;
+    line-height: 1.5;
+}

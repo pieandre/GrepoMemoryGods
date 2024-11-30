@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Divinità - Mitiche</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sezione con spiegazione del gioco -->
+    <div class="game-description">
+        <p>Benvenuto al <b>GrepoMemoryGods!</b><br>Il tuo obbiettivo è di trovare tutti gli otto terzetti di carte, associati in base alla divinità ed alle sue truppe mitiche.<br>Attenzione: se si riempie la barra devi ricominciare!</p>
+    </div>
+
+    <div class="memory-game">
+        <!-- 8 terzetti: ogni valore è presente 3 volte -->
+        <div class="card" data-card="A">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="A">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="A">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="B">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="B">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="B">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="C">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="C">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="C">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="D">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="D">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="D">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="E">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="E">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="E">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="F">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="F">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="F">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="G">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="G">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="G">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+
+        <div class="card" data-card="H">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="H">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+        <div class="card" data-card="H">
+            <div class="card-inner">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- Contatore e barra di progresso posizionati sotto la griglia -->
+<div class="game-info">
+    <p>Mosse: <span id="move-counter">0</span></p>
+    <progress id="move-progress" value="0" max="1000"></progress>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
